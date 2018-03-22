@@ -1,21 +1,19 @@
 <template>
     <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
         <div class="my-auto">
-            <h2 class="mb-5">Experience</h2>
-            <experience v-for="(exp, index) in experiences" :experience="exp" :key="index"></experience>
+            <h2 class="mb-5">Experiencia</h2>
+            <div>
+                {{ experiences.experience }}
+            </div>
         </div>
     </section>
 </template>
 
 <script>
-    import Experience from './subcomponents/Experience.vue' 
     export default {
         name: "experiences",
-        props: ['experiences'],
-        components: {
-            'experience': Experience
+        props: ['experiences']
         }
-    }
 </script>
 
 <style scoped>
